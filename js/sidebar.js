@@ -1,0 +1,14 @@
+document.writeln("<div class=\'side-bar\' style=\'display: block; position: fixed; left: 8px; top: 8px;\'>");
+document.writeln("    <div class=\'header\'>");
+document.writeln("      <a href=\'index.html\' class=\'logo\'>Musichall</a>");
+document.writeln("      <div class=\'intro\'>从这里开始您的探索</div>");
+document.writeln("    </div>");
+document.writeln("    <div class=\'nav\'>");
+document.writeln("			<a href=\'mh1.html\'><button  class=\'item\'>动画原声</button></a>");
+document.writeln("			<a href=\'mh2.html\'><button  class=\'item\'>影视原声</button></a>");
+document.writeln("			<a href=\'mh3.html\'><button  class=\'item\'>游戏原声</button></a>");
+document.writeln("			<a href=\'mh4.html\'><button  class=\'item\'>怀旧金曲</button></a>");
+document.writeln("			<a href=\'mh5.html\'><button  class=\'item\'>音mad</button></a>");
+document.writeln("	<p id=\'back-to-top\'><a href=\'#top\'><span></span></a></p>");
+document.writeln(" </div>");
+document.writeln("</div>");

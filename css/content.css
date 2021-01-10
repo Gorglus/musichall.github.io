@@ -1,0 +1,33 @@
+@import"normallize";
+.main{
+	position:fixed;
+	left:30%;
+	top:0%;
+	width: 1000px;
+	height:1000px;
+	background:#faebd7;
+}
+.title{
+	font-size:  23px;
+	font-weight: 700;
+	color: #454545;
+	text-decoration:none;
+}
+.name{
+	
+	margin-left:6%;
+}
+.img{
+	width:700px;
+	max-height:400px;
+}
+.mitem{
+	margin-top:6%;
+	margin-left:14%;
+}
+body{
+	background:url(img/back4.jpg);
+	background-repeat:no-repeat ; 
+	background-size:100% 100%;
+	background-attachment: fixed;
+}

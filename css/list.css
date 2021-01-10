@@ -1,0 +1,80 @@
+@import"normallize";
+.main{
+	position:fixed;
+	left:30%;
+	top:0%;
+	width: 1000px;
+	background:#faebd7;
+	box-sizing:border-box;
+	height:100%;
+}
+.title{
+	width:550px;
+	font-size:  22px;
+	font-weight: 700;
+	color: #454545;
+	text-decoration:none;
+	white-space:nowrap；
+}
+.artist{
+	width:200px;
+	margin-right:1%;
+}
+.name{
+	margin-top:0%;
+}
+ .mitem{
+	margin-bottom:8%;
+	color:black;
+	width: 238px;
+	height: 40px;
+	border:0;
+	font-size: 16px;
+	box-sizing: content-box;				
+	display:flex;
+	justify-content:space-between;
+}
+.main{
+	position:relative;
+	
+}
+.name{
+	width:800px;
+	display:flex;
+}
+
+.img{
+	width:100px;
+	height: auto;
+	max-height: 70px;
+	max-width: 100px; 
+	min-width:100px ;
+	overflow:hidden;
+}
+.content{
+	width:150px;
+}
+body{
+	background:url(/img/back4.jpg) ;
+	background-repeat:no-repeat ; 
+	background-size:100% 100%;
+	background-attachment: fixed;
+	height:100%;
+}
+.mh{
+	display:block;
+	text-align:center;
+	margin-top:15%;
+	font-size: 60px;
+	
+	line-height: 2;
+	text-decoration:none;
+	font-weight:bold;
+	color:black;
+}
+.mh:hover{
+	font-size: 90px;
+}
+.mh:active{
+	font-size: 60px;
+}
