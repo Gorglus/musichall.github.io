@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <link rel="stylesheet" href="/css/list.css">
+</head>
+<body onload="checkCookie()" >
+  <a href="mh1.html" class="mh">Musichall</a>
+</body>
+<script>
+
+    var layer=document.createElement("div");
+	layer.id="layer";
+
+    function func(date){
+        var style={
+            background:"#454545",
+            position:"absolute",
+            zIndex:10,
+            width:"400px",
+            height:"100px",
+            left:"50%",
+            top:"5%",
+            marginLeft:"-200px",
+            marginTop:"-50px",
+			color:"#eee"
+        }
+        for(var i in style)
+            layer.style[i]=style[i];   
+   
+        
+        if(document.getElementById("layer")==null){
+            
+            document.body.appendChild(layer);
+            
+            layer.innerHTML=date;
+            layer.style.textAlign="center";
+            layer.style.lineHeight="100px"; 
+            // 3s后去掉弹出窗
+            setTimeout("document.body.removeChild(layer)",1500)
+        }
+    }
+ 
+  
+    change();  
+    function change(){  
+        var today;  
+        today = new Date();  
+        timeString = today.toLocaleString();  
+        document.getElementById("date").innerHTML = timeString;  
+        setTimeout("change();", 100);  
+    }
+</script>
+<script>
+	function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname){
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+    }
+    return "";
+}
+function checkCookie(){
+    var user=getCookie("username");
+    if (user!=""){
+        //alert("欢迎 " + user + "!");
+		var wel="欢迎 " + user + "!";
+		func(wel);
+    }
+    else {
+        user = prompt("请输入用户名：","");
+          if (user!="" && user!=null){
+            setCookie("username",user,10);
+        }
+    }
+}
+</script>
+</html>
